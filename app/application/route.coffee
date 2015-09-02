@@ -1,8 +1,14 @@
 `import Ember from 'ember'`
 
+window.second = Ember.Object.create(title: 'Na ceste', author: 'Jack Kerouac')
+
+window.BOOKS = [ Ember.Object.create(title: 'Valka s mloky', author: 'Karel Capek'),
+                 second ]
+
+
+
 ApplicationRoute = Ember.Route.extend
   model: ->
-    [ Ember.Object.create(title: 'Valka s mloky'),
-      Ember.Object.create(title: 'Na ceste') ]
+    window.BOOKS
 
 `export default ApplicationRoute`
